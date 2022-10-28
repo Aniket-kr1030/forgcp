@@ -15,6 +15,5 @@ RUN cd /app && \
     /usr/local/bin/composer install --no-dev
 
 RUN chown -R www-data: /app
-
 CMD sh /app/docker/startup.sh
 
