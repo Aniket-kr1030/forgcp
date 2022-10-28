@@ -15,7 +15,7 @@ RUN cd /app && \
     /usr/local/bin/composer install --no-dev
 
 RUN chown -R www-data: /app
-RUN chmod +x /docker/migration.sh
-ENTRYPOINT ["/docker/migration.sh"]
+RUN chmod +x /app/docker/migration.sh
+ENTRYPOINT ["/app/docker/migration.sh"]
 CMD sh /app/docker/startup.sh
 
