@@ -13,7 +13,7 @@ use App\Models\course;
 class Auth extends Controller
 {
     public function login(){
-        return view('Login');
+        return view('login');
 
     }
     public function welcome(){
@@ -75,7 +75,7 @@ class Auth extends Controller
 
     }
     public function registration(){
-        return view('Registration');
+        return view('registration');
 
     }
     public function registerUser(Request $request){
