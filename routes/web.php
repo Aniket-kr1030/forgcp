@@ -38,7 +38,14 @@ Route::get('/showPdf',
 Route::get('/',[Auth::class,'login'])->middleware('alreadyLoggedIn');
 Route::get('/login',[Auth::class,'login'])->middleware('alreadyLoggedIn');
 Route::get('/welcome',[Auth::class,'dashboard'])->middleware('isLoggedIn');
-Route::get('/courseplanner',[Auth::class,'courseplanner'])->middleware('isLoggedIn');
+
+Route::get('/courseplanner',[
+    view('courseplanner')
+]
+);
+
+
+
 Route::get('/gpacalculator',[Auth::class,'gpacalculator'])->middleware('isLoggedIn');
 Route::get('/profile',[Auth::class,'profile'])->middleware('isLoggedIn');
 Route::get('/registration',[Auth::class,'registration'])->middleware('alreadyLoggedIn');
