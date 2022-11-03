@@ -39,6 +39,7 @@ class DatabaseSeeder extends Seeder
         
         for($i = 0 ; $i <10 ; $i++){
             \App\Models\course::factory()->create([
+                'name' => 'course'.$i.'slow',
                 'pace_id' => 'slow',
                 'credit' =>$i%4,
                 'sem_till_avail' => 6 ,
@@ -46,6 +47,7 @@ class DatabaseSeeder extends Seeder
         }
         for($i = 0 ; $i <10 ; $i++){
             \App\Models\course::factory()->create([
+                'name' => 'course'.$i.'medium',
                 'pace_id' => 'medium',
                 'credit' =>$i%4,
                 'sem_till_avail' => 6 ,
@@ -53,6 +55,7 @@ class DatabaseSeeder extends Seeder
         }
         for($i = 0 ; $i <10 ; $i++){
             \App\Models\course::factory()->create([
+                'name' => 'course'.$i.'fast',
                 'pace_id' => 'fast',
                 'credit' =>$i%4,
                 'sem_till_avail' => 6 ,

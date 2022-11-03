@@ -48,4 +48,6 @@ Route::post('/login-user',[Auth::class,'loginUser'])->name
 ('login-user');
 Route::get('/dashboard',[Auth::class,'dashboard'])->middleware('isLoggedIn');
 Route::get('/logout',[Auth::class,'logout']);
-Route::get('/admin',[Auth::class,'admin'])->middleware('isLoggedIn');
+Route::get('/admin', function (){
+    return view('admin'); 
+});

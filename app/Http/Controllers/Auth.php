@@ -66,14 +66,6 @@ class Auth extends Controller
         return view('profile',compact('data'));
 
     }
-    public function admin(){
-        $data=array();
-        if(Session::has('loginId')){
-            $data=User::where('id','=',Session::get('loginId'))->first();
-        }
-        return view('admin',compact('data'));
-
-    }
     public function registration(){
         return view('registration');
 
